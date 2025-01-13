@@ -1,3 +1,9 @@
+/* client/src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 * {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
@@ -5,7 +11,7 @@
 }
 
 body {
-  background-color: #252525;
+  background-color: #ddd5d5;
   color: #fff;
 }
 
