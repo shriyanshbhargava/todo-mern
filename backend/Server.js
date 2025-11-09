@@ -1,8 +1,9 @@
 // Import necessary packages
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 const express = require("express");
 const mongoose = require("mongoose");
 const multer = require("multer");
-const path = require("path");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -15,13 +16,7 @@ app.use(bodyParser.json()); // Parse incoming JSON requests
 
 // MongoDB Connection (Replace with your own MongoDB URI)
 mongoose
-  .connect(
-    "mongodb+srv://isthisallitsgonnabe:goQ6GQsjvYd8v7WV@cluster0.v1fxg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("Failed to connect to MongoDB:", err));
 

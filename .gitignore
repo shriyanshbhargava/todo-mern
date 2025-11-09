@@ -1,0 +1,8 @@
+backend/.env
+.env
+*.env
+**/*.env
+node_modules
+backend/.env
+node_modules/react-dom/cjs/react-dom.development.js
+node_modules/react-dom/umd/react-dom.development.js
